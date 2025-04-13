@@ -11,17 +11,25 @@
    <header>
        <nav class="navbar">
            <div class="logo">
-               <a href="#home" aria-label="Home">
+               <a href="index.html" aria-label="Home">
                    <img src="myAssets/KDR7_Logo.png" alt="KDR7 Logo" width="50" height="50">
                </a>
            </div>
            <button class="hamburger" aria-label="Toggle navigation menu">
-               <span class="bar"></span>
-               <span class="bar"></span>
-               <span class="bar"></span>
+               <div class="hamburger-icon">
+                   <span></span>
+                   <span></span>
+                   <span></span>
+               </div>
            </button>
+           <ul class="menu-links">
+               <li><a href="about.html">About Me</a></li>
+               <li><a href="#skills">Skills</a></li>
+               <li><a href="#projects">Projects</a></li>
+               <li><a href="#connect">Connect</a></li>
+           </ul>
            <ul class="nav-links">
-               <li><a href="#about">About Me</a></li>
+               <li><a href="about.html">About Me</a></li>
                <li><a href="#skills">Skills</a></li>
                <li><a href="#projects">Projects</a></li>
                <li><a href="#connect">Connect</a></li>
@@ -31,11 +39,12 @@
 
 
    <main>
-       <section id="about" class="section">
-           <h1>About Me</h1>
+       <section class="section">
            <div class="content">
                <img src="myAssets/headshot.png" alt="Profile Picture" class="profile-pic">
-               <p>Welcome to my portfolio! I'm a passionate developer dedicated to creating meaningful digital experiences.</p>
+               <h1>Hi, I'm Kaleb</h1>
+               <p class="hero-text">A passionate developer crafting digital experiences that make a difference. I combine creativity with technical expertise to build solutions that matter.</p>
+               <p class="hero-subtext">Let's create something amazing together!</p>
            </div>
        </section>
 

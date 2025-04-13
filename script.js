@@ -1,30 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    const links = document.querySelectorAll('.nav-links a');
+    const menuLinks = document.querySelector('.menu-links');
+    const hamburgerIcon = document.querySelector('.hamburger-icon');
+    const links = document.querySelectorAll('.menu-links a, .nav-links a');
  
  
     // Toggle mobile navigation
     hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        hamburger.classList.toggle('active');
+        menuLinks.classList.toggle('open');
+        hamburgerIcon.classList.toggle('open');
     });
  
  
     // Close mobile menu when a link is clicked
     links.forEach(link => {
         link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            hamburger.classList.remove('active');
+            menuLinks.classList.remove('open');
+            hamburgerIcon.classList.remove('open');
         });
     });
  
  
     // Close mobile menu when clicking outside
     document.addEventListener('click', (e) => {
-        if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-            navLinks.classList.remove('active');
-            hamburger.classList.remove('active');
+        if (!menuLinks.contains(e.target) && !hamburger.contains(e.target)) {
+            menuLinks.classList.remove('open');
+            hamburgerIcon.classList.remove('open');
         }
     });
  
