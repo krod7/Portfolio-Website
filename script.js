@@ -33,15 +33,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Smooth scrolling for navigation links
     links.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-           
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop - 70, // Adjust for fixed header
-                    behavior: 'smooth'
-                });
+            const href = link.getAttribute('href');
+            
+            // Only prevent default and handle smooth scrolling for anchor links
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                const targetSection = document.querySelector(href);
+               
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 70, // Adjust for fixed header
+                        behavior: 'smooth'
+                    });
+                }
             }
         });
     });
