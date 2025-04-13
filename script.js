@@ -30,12 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
  
  
-    // Smooth scrolling for navigation links
+    // Handle navigation
     links.forEach(link => {
         link.addEventListener('click', (e) => {
             const href = link.getAttribute('href');
             
-            // Only prevent default and handle smooth scrolling for anchor links
+            // If it's an anchor link (starts with #), handle smooth scrolling
             if (href.startsWith('#')) {
                 e.preventDefault();
                 const targetSection = document.querySelector(href);
@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                 }
             }
+            // For page links (like about.html), let the default behavior handle it
         });
     });
  }); 
